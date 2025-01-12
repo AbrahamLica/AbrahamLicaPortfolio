@@ -1,11 +1,11 @@
-import * as C from "./styles"
+import * as C from "./styles";
 
 export const Header = () => {
-    return(
-        <div>
-            <C.button>testead</C.button>
-        </div>
-    )
-}
+  return (
+    <C.containerHeader>
+      
+    </C.containerHeader>
+  );
+};
 
-export default Header
+export default Header;

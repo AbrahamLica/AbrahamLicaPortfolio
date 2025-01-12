@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 
-export const containerHeader = styled.div`
+export const containerFooter = styled.div`
   width: 100%;
   padding: 5px;
   min-height: 10vh;
