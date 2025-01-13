@@ -1,16 +1,21 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
-export const containerFooter = styled.div`
+export const ContainerFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
   min-height: 10vh;
-  background-color: red;
+  /* background-color: red; */
   /* border-top: 1px solid black; */
 `;
 
-export const container = styled.div`
-  padding: 20px;
+export const Img = styled.img`
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease; /* Aumenta o tempo e suaviza o movimento */
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

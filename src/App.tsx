@@ -1,11 +1,9 @@
-import { useState } from "react";
-import Header from "./components/header/header";
-import * as C from "./styles";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import { GlobalStyle } from "./AppGlobalStyles";
-import Title from "./components/title/title";
-import Footer from "./components/footer/footer";
+import { useState } from 'react';
+import Header from './components/header/header';
+import * as C from './styles';
+import { GlobalStyle } from './AppGlobalStyles';
+import Footer from './components/footer/footer';
+import Begin from './components/begin/begin';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,14 +14,7 @@ function App() {
       <C.mainContainer>
         <Header></Header>
 
-
-
-
-        <Title></Title>
-
-
-
-
+        <Begin></Begin>
 
         <Footer></Footer>
       </C.mainContainer>
