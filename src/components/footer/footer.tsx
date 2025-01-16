@@ -2,7 +2,7 @@ import Logo from '../logo/logo';
 import * as C from './styles';
 import * as G from '../../GlobalStyles';
 import github from '../../assets/icons/github.png';
-import linkedin from '../../assets/icons/linkedin.png';
+import linkedin from '../../assets/icons/linkedin.svg';
 import email from '../../assets/icons/email.png';
 
 export const Footer = () => {

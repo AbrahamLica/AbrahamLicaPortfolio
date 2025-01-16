@@ -5,13 +5,11 @@ export const mainContainerHeader = styled.div`
   top: 0;
   left: 0;
   z-index: 1000;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
   width: 100%;
   padding: 5px;
   min-height: 10vh;
-  /* background-color: black; */
-  /* border-bottom: 1px solid black; */
+  background-color: white;
 `;
 
 export const container = styled.div`

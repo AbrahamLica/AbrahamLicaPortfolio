@@ -106,16 +106,44 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Text = styled.p<TextProps>`
-  color: ${(props) => props.color};
-  font-weight: ${(props) => (props.bold ? 'bold' : 'light')};
-  font-size: ${(props) => props.fontSize};
+  color: black;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 2rem;
   text-align: ${(props) => props.textAlign};
   margin: ${(props) => props.margin};
-  background-color: ${(props) => props.backgroundColor};
-  border-radius: ${(props) => props.borderRadius};
   padding: ${(props) => props.padding};
-  cursor: ${(props) => (props.cursorPointer ? 'pointer' : null)};
-  z-index: ${(props) => (props.zIndex ? '1' : '')};
+`;
+
+export const Span = styled.span<TextProps>`
+  font-weight: bold;
+  margin: ${(props) => props.margin};
+  font-size: ${(props) => props.fontSize};
+`;
+
+export const Title = styled.p<TextProps>`
+  color: black;
+  font-family: 'Playfair Display';
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: ${(props) => props.textAlign};
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
+  background-color: ${(props) => props.backgroundColor};
+`;
+
+export const TitleSecondary = styled.p<TextProps>`
+  color: black;
+  font-family: 'Playfair Display';
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: ${(props) => props.textAlign};
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
+  background-color: ${(props) => props.backgroundColor};
 `;
 
 export const Link = styled.a<TextProps>`
@@ -125,12 +153,13 @@ export const Link = styled.a<TextProps>`
   text-align: ${(props) => props.textAlign};
   cursor: pointer;
   text-decoration: underline;
+  margin: ${(props) => props.margin};
 `;
 
 export const Img = styled.img<ContainerProps>`
   color: ${(props) => props.color};
-  width: ${(props) => props.width};
-  height: ${(props) => props.heigth};
+  width: ${(props) => props.width || 'auto'};
+  height: ${(props) => props.height || 'auto'};
   background-color: ${(props) => props.backgroundColor};
   display: ${(props) => (props.displayFlex ? 'flex' : 'block')};
   flex: ${(props) => props.flex};
@@ -148,4 +177,5 @@ export const Img = styled.img<ContainerProps>`
   background-size: ${(props) => props.backgroundSize};
   cursor: ${(props) => (props.cursorPointer ? 'pointer' : null)};
   overflow: hidden;
+  object-fit: cover;
 `;

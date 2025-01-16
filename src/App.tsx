@@ -4,6 +4,8 @@ import * as C from './styles';
 import { GlobalStyle } from './AppGlobalStyles';
 import Footer from './components/footer/footer';
 import Begin from './components/begin/begin';
+import About from './components/about/about';
+import Services from './components/services/services';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,11 +14,15 @@ function App() {
     <>
       <GlobalStyle />
       <C.mainContainer>
-        <Header></Header>
+        <Header />
 
-        <Begin></Begin>
+        <Begin />
 
-        <Footer></Footer>
+        <About />
+
+        <Services />
+
+        <Footer />
       </C.mainContainer>
     </>
   );
