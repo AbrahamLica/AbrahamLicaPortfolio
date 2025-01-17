@@ -21,6 +21,7 @@ export type ContainerProps = {
   backgroundSize?: string;
   justifyContent?: string;
   top?: string;
+  objectPosition?: string;
 };
 
 export type InputProps = {
@@ -171,11 +172,8 @@ export const Img = styled.img<ContainerProps>`
   padding: ${(props) => props.padding};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
-  background-image: url(${(props) => props.backgroundImage});
-  background-position: ${(props) => props.backgroundPosition};
-  background-repeat: no-repeat;
-  background-size: ${(props) => props.backgroundSize};
   cursor: ${(props) => (props.cursorPointer ? 'pointer' : null)};
   overflow: hidden;
   object-fit: cover;
+  object-position: ${(props) => props.objectPosition};
 `;

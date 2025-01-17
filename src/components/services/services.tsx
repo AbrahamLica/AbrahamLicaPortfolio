@@ -10,7 +10,7 @@ import blog from '../../assets/icons/blog.svg';
 export const Services = () => {
   return (
     <G.Container column width='90%' margin='70px 0 0 0'>
-      <G.Title margin='0 0 30px 0'>Serviços contratáveis</G.Title>
+      <G.Title margin='0 0 60px 0'>Serviços contratáveis</G.Title>
 
       <G.Container alignItems='start' justifyContent='space-between' flexWrap width='100%'>
         <C.ContainerServices>

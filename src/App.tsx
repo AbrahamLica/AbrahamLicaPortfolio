@@ -6,6 +6,8 @@ import Footer from './components/footer/footer';
 import Begin from './components/begin/begin';
 import About from './components/about/about';
 import Services from './components/services/services';
+import Skills from './components/skills/skills';
+import Recomendations from './components/recomendations/recomendations';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,7 +22,11 @@ function App() {
 
         <About />
 
+        <Skills />
+
         <Services />
+
+        <Recomendations />
 
         <Footer />
       </C.mainContainer>

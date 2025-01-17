@@ -7,7 +7,7 @@ export const containerBegin = styled.div`
   justify-content: center;
   align-items: center;
   /* background-color: green; */
-  margin-right: 20px;
+  margin-right: 50px;
 `;
 
 export const nome = styled.h1`
