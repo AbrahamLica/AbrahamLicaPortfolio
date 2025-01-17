@@ -6,6 +6,17 @@ import javascript from '../../assets/icons/tech-icons/normal-icons/javascript.pn
 import typescript from '../../assets/icons/tech-icons/normal-icons/typescript.png';
 import react from '../../assets/icons/tech-icons/normal-icons/react.png';
 import angular from '../../assets/icons/tech-icons/normal-icons/angular.png';
+import bootstrap from '../../assets/icons/tech-icons/normal-icons/bootstrap.png';
+import primeng from '../../assets/icons/tech-icons/normal-icons/primeng.png';
+import sass from '../../assets/icons/tech-icons/normal-icons/sass.png';
+import tailwind from '../../assets/icons/tech-icons/normal-icons/tailwind.png';
+import mysql from '../../assets/icons/tech-icons/normal-icons/mysql.png';
+import node from '../../assets/icons/tech-icons/normal-icons/node.png';
+import php from '../../assets/icons/tech-icons/normal-icons/php.png';
+import postgre from '../../assets/icons/tech-icons/normal-icons/postgre.png';
+import redux from '../../assets/icons/tech-icons/normal-icons/redux.png';
+import spring from '../../assets/icons/tech-icons/normal-icons/spring.png';
+import java from '../../assets/icons/tech-icons/normal-icons/java.png';
 
 export const about = () => {
   return (
@@ -22,16 +33,28 @@ export const about = () => {
         </G.Span>
       </G.Container>
 
-      <G.Container width='50%' column alignItems='center'>
+      <G.Container width='40%' column alignItems='center'>
         <G.Title>Tecnologias</G.Title>
 
-        <G.Container margin='30px 0 0' flexWrap>
-          <G.Img src={html} width='60px' />
-          <G.Img src={css} width='60px' />
-          <G.Img src={javascript} width='60px' />
-          <G.Img src={typescript} width='60px' />
-          <G.Img src={react} width='60px' />
-        </G.Container>
+        <C.ContainerTechs>
+          <C.IconTech src={html} />
+          <C.IconTech src={css} />
+          <C.IconTech src={javascript} />
+          <C.IconTech src={typescript} />
+          <C.IconTech src={react} />
+          <C.IconTech src={angular} />
+          <C.IconTech src={bootstrap} />
+          <C.IconTech src={primeng} />
+          <C.IconTech src={sass} />
+          <C.IconTech src={tailwind} />
+          <C.IconTech src={redux} />
+          <C.IconTech src={java} />
+          <C.IconTech src={spring} />
+          <C.IconTech src={node} />
+          <C.IconTech src={php} />
+          <C.IconTech src={postgre} />
+          <C.IconTech src={mysql} />
+        </C.ContainerTechs>
       </G.Container>
     </G.Container>
   );

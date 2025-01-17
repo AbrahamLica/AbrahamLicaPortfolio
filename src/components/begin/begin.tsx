@@ -6,7 +6,7 @@ import linkedin from '../../assets/icons/linkedin.svg';
 
 export const Begin = () => {
   return (
-    <G.Container margin='100px 0 50px 0' width='95%' alignItems='center' justifyContent='center'>
+    <G.Container margin='150px 0 50px 0' width='95%' alignItems='center' justifyContent='center'>
       <C.containerBegin>
         <C.nome>Abraham Licá</C.nome>
         <C.profissao>Desenvolvedor Web Full-stack</C.profissao>
