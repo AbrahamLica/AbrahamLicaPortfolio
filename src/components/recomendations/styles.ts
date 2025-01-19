@@ -61,6 +61,7 @@ export const Img = styled.img`
 export const Name = styled.p`
   margin: 10px 0;
   font-weight: bold;
+  font-size: 1.4rem;
 `;
 
 export const Position = styled.p`
@@ -69,4 +70,5 @@ export const Position = styled.p`
 
 export const Recomendation = styled.p`
   line-height: 25px;
+  font-size: 1.3rem;
 `;

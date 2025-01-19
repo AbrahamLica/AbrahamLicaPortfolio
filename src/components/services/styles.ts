@@ -7,7 +7,7 @@ export const TextServices = styled.p<TextProps>`
   color: black;
   font-family: 'Roboto';
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.4rem;
   text-align: ${(props) => props.textAlign};
   margin-top: 20px;

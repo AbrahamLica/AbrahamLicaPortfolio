@@ -110,7 +110,7 @@ export const Text = styled.p<TextProps>`
   color: black;
   font-family: 'Roboto';
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   text-align: ${(props) => props.textAlign};
   margin: ${(props) => props.margin};

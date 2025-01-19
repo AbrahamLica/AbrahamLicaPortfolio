@@ -11,7 +11,7 @@ import rosiely from '../../assets/imgs/recomendações/rosiely-carrera.jpeg';
 export const Recomendations = () => {
   return (
     <G.Container width='90%' margin='0 0 30px 0' column>
-      <G.Title>Recomendações</G.Title>
+      <G.Title margin='0 0 50px 0'>Recomendações</G.Title>
 
       <G.Container width='100%' justifyContent='center' column>
         <C.ContainerRecomendation>
