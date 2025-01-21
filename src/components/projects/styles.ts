@@ -2,17 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const ContainerProjects = styled.div`
   width: 100%;
-  /* background-color: blue; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
 `;
-
-
-
-
-
-
-
-

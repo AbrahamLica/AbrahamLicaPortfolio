@@ -20,8 +20,19 @@ import spring from '../../assets/icons/tech-icons/normal-icons/spring.png';
 import java from '../../assets/icons/tech-icons/normal-icons/java.png';
 import background from '../../assets/imgs/background-skills.png';
 import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-export const skills = () => {
+interface ComponentProps {
+  id?: string;
+}
+
+export const Skills: React.FC<ComponentProps> = ({ id }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -31,10 +42,12 @@ export const skills = () => {
     setMousePos({ x, y });
   };
   return (
-    <G.Container width='90%' column margin='70px 0 0 0'>
-      <G.Title margin='0 0 30px 0'>Tecnologias</G.Title>
+    <G.Container width='90%' column margin='70px 0 0 0' id={id}>
+      <G.Title margin='0 0 30px 0' data-aos='fade-right'>
+        Tecnologias
+      </G.Title>
 
-      <C.ContainerBackground backgroundImage={`linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${background})`}>
+      <C.ContainerBackground backgroundImage={`linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${background})`} data-aos='fade-left'>
         <C.ContainerTechs onMouseMove={handleMouseMove} mouseX={mousePos.x} mouseY={mousePos.y}>
           <C.IconTech src={html} />
           <C.IconTech src={css} />
@@ -58,5 +71,3 @@ export const skills = () => {
     </G.Container>
   );
 };
-
-export default skills;

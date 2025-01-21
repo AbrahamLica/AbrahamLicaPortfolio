@@ -5,10 +5,13 @@ import github from '../../assets/icons/github.png';
 import linkedin from '../../assets/icons/linkedin.svg';
 import email from '../../assets/icons/email.png';
 
-export const Footer = () => {
+interface ComponentProps {
+  id?: string;
+}
+export const Footer: React.FC<ComponentProps> = ({ id }) => {
   return (
     <C.ContainerFooter>
-      <G.Container padding='15px' column width='50%'>
+      <G.Container padding='15px' column width='50%' id={id}>
         <Logo></Logo>
         <p>© 2025 Abraham Melquisedeque Pereira Licá. Todos os direitos reservados.</p>
       </G.Container>
@@ -27,5 +30,3 @@ export const Footer = () => {
     </C.ContainerFooter>
   );
 };
-
-export default Footer;

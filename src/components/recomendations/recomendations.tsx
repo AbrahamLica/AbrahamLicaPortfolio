@@ -7,14 +7,25 @@ import cristian from '../../assets/imgs/recomendações/cristian-santos.jpeg';
 import saulo from '../../assets/imgs/recomendações/saulo-mesquita.jpeg';
 import orindo from '../../assets/imgs/recomendações/orindo-tobias.jpeg';
 import rosiely from '../../assets/imgs/recomendações/rosiely-carrera.jpeg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-export const Recomendations = () => {
+interface ComponentProps {
+  id?: string;
+}
+
+export const Recomendations: React.FC<ComponentProps> = ({ id }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <G.Container width='90%' margin='0 0 30px 0' column>
+    <G.Container width='90%' margin='0 0 30px 0' column id={id}>
       <G.Title margin='0 0 50px 0'>Recomendações</G.Title>
 
       <G.Container width='100%' justifyContent='center' column>
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-right'>
           <C.Img src={erich} />
           <C.Card>
             <C.Name>Erich Galvão - Coordenador de Operações TI Vale</C.Name>
@@ -25,7 +36,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-left'>
           <C.Img src={saulo} />
           <C.Card>
             <C.Name>Saulo Mesquita - Coordenador de Informática no Atacadão (Castanhal-PA)</C.Name>
@@ -37,7 +48,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-right'>
           <C.Img src={fabio} />
           <C.Card>
             <C.Name>Fabio Lima - Gerente comercial no Atacadão (Castanhal-PA)</C.Name>
@@ -45,7 +56,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-left'>
           <C.Img src={cristian} />
           <C.Card>
             <C.Name>Cristian Santos - Auxiliar de Informática no Atacadão</C.Name>
@@ -56,7 +67,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-right'>
           <C.Img src={rosiely} />
           <C.Card>
             <C.Name>Rosiely Carrera - Auxiliar de Informática no Atacadão</C.Name>
@@ -67,7 +78,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-left'>
           <C.Img src={cristina} />
           <C.Card>
             <C.Name>Cristina Lima - Analista de RH</C.Name>
@@ -78,7 +89,7 @@ export const Recomendations = () => {
           </C.Card>
         </C.ContainerRecomendation>
 
-        <C.ContainerRecomendation>
+        <C.ContainerRecomendation data-aos='fade-right'>
           <C.Img src={orindo} />
           <C.Card>
             <C.Name>Orindo Tobias Jr - Coordenador de Logística</C.Name>
@@ -89,5 +100,3 @@ export const Recomendations = () => {
     </G.Container>
   );
 };
-
-export default Recomendations;

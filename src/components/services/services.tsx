@@ -6,13 +6,26 @@ import api from '../../assets/icons/api.svg';
 import seo from '../../assets/icons/seo.svg';
 import maintence from '../../assets/icons/maintence.svg';
 import blog from '../../assets/icons/blog.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-export const Services = () => {
+interface ComponentProps {
+  id?: string;
+}
+
+export const Services: React.FC<ComponentProps> = ({ id }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <G.Container column width='90%' margin='70px 0 0 0'>
-      <G.Title margin='0 0 60px 0'>Serviços contratáveis</G.Title>
+      <G.Title margin='0 0 60px 0' data-aos='fade-down'>
+        Serviços contratáveis
+      </G.Title>
 
-      <G.Container alignItems='start' justifyContent='space-between' flexWrap width='100%'>
+      <G.Container alignItems='start' justifyContent='space-between' flexWrap width='100%' data-aos='fade-up'>
         <C.ContainerServices>
           <G.Img src={landing} width='50px' margin='0 0 10px 0' />
           <G.TitleSecondary>Desenvolvimento de Sites e Landing Pages</G.TitleSecondary>
@@ -54,5 +67,3 @@ export const Services = () => {
     </G.Container>
   );
 };
-
-export default Services;

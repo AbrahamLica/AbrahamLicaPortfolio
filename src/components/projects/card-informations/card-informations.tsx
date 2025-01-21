@@ -1,5 +1,9 @@
-import * as C from "./styles";
-import * as G from "../../../GlobalStyles";
+import * as C from './styles';
+import * as G from '../../../GlobalStyles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import { CgLink } from 'react-icons/cg';
 
 interface CardInformationsProps {
   name: string;
@@ -10,25 +14,36 @@ interface CardInformationsProps {
 }
 
 export const CardInformations = ({ name, description, linkRepositoryFrontend, linkRepositoryBackend, linkProjectRunning }: CardInformationsProps) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <G.Container width="40%" column>
+    <G.Container width='50%' column data-aos='fade-right'>
       <C.Title>{name}</C.Title>
       <C.Description>{description}</C.Description>
-      <G.Container>
+      <G.Container padding='7px 0' width='100%' justifyContent='space-between'>
         {linkRepositoryFrontend && (
-          <C.Link href={linkRepositoryFrontend} target="_blank">
-            Repositório Frontend
-          </C.Link>
+          <G.Button>
+            <G.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
+              Repositório Front-end <CgLink />
+            </G.ButtonLink>
+          </G.Button>
         )}
+
         {linkRepositoryBackend && (
-          <C.Link href={linkRepositoryBackend} target="_blank">
-            Repositório Backend
-          </C.Link>
+          <G.Button>
+            <G.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
+              Repositório Back-end <CgLink />
+            </G.ButtonLink>
+          </G.Button>
         )}
         {linkProjectRunning && (
-          <C.Link href={linkProjectRunning} target="_blank">
-            Projeto em Execução
-          </C.Link>
+          <G.Button>
+            <G.ButtonLink href={linkProjectRunning} target='_blank' rel='noopener noreferrer' className='button_top'>
+              Projeto em execução <CgLink />
+            </G.ButtonLink>
+          </G.Button>
         )}
       </G.Container>
     </G.Container>
