@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface DropdownMenuProps {
+  isOpen: boolean;
+}
+
 export const HamburgerLabel = styled.label`
   cursor: pointer;
   display: inline-block;
@@ -37,28 +41,22 @@ export const Line = styled.path`
   }
 `;
 
-export const DropdownMenu = styled.div`
+export const DropdownMenu = styled.div<DropdownMenuProps>`
   position: absolute;
   top: 3em;
-  left: -250px; 
-  width: 250px; 
+  left: -250px;
+  width: 250px;
   background-color: white;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.8), 0 -2px 6px rgba(0, 0, 0, 0.2);
-  padding: 15px; 
+  padding: 15px;
   border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+  transform: ${(props) => (props.isOpen ? "translateY(0)" : "translateY(-10px)")};
   transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
-
-
-  ${HamburgerInput}:checked ~ & {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 `;
+
 
 
 export const MenuItem = styled.a`
