@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font-family: "Roboto";
 	vertical-align: baseline;
+  scroll-behavior: smooth;
 }
 
 article, aside, details, figcaption, figure, 
@@ -47,6 +48,8 @@ table {
 	border-spacing: 0;
 } 
 
+html {
+  scroll-behavior: smooth;
+}
+
 `;
-
-

@@ -18,6 +18,10 @@ export const container = styled.div`
   align-items: center;
   width: 100%;
   padding: 15px;
+
+  @media (max-width: 870px) {
+    justify-content: center;
+  }
 `;
 
 export const menu = styled.p`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface DropdownMenuProps {
   isOpen: boolean;
@@ -20,6 +20,10 @@ export const HamburgerSVG = styled.svg`
   ${HamburgerInput}:checked + & {
     transform: rotate(-45deg);
   }
+
+  @media (max-width: 2560px) {
+    height: 4em;
+  }
 `;
 
 export const Line = styled.path`
@@ -28,8 +32,7 @@ export const Line = styled.path`
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.line-top-bottom {
     stroke-dasharray: 12 63;
@@ -42,22 +45,34 @@ export const Line = styled.path`
 `;
 
 export const DropdownMenu = styled.div<DropdownMenuProps>`
-  position: absolute;
-  top: 3em;
-  left: -250px;
-  width: 250px;
+  position: fixed;
+  top: 6em;
+  right: 100px;
+  width: 22rem;
   background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.8), 0 -2px 6px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  border-radius: 5px;
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
-  visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
-  transform: ${(props) => (props.isOpen ? "translateY(0)" : "translateY(-10px)")};
+  padding: 1.5rem;
+  opacity: ${(props) => (props.isOpen ? '1' : '0')};
+  visibility: ${(props) => (props.isOpen ? 'visible' : 'hidden')};
+  transform: ${(props) => (props.isOpen ? 'translateY(0)' : 'translateY(-10px)')};
   transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
+  border: 1px solid black;
+  border-radius: 15px;
+
+  @media (max-width: 870px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: none;
+    padding: 30px 15px;
+  }
 `;
-
-
 
 export const MenuItem = styled.a`
   display: block;
@@ -65,7 +80,7 @@ export const MenuItem = styled.a`
   color: black;
   text-decoration: none;
   font-size: 2rem;
-  position: relative; 
+  position: relative;
   box-sizing: border-box;
 
   &:hover {
@@ -77,17 +92,28 @@ export const MenuItem = styled.a`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 1px; 
+    height: 1px;
     width: 0;
     background-color: black;
-    transition: width 0.7s ease; 
+    transition: width 0.7s ease;
   }
 
   &:hover::after {
-    width: 100%; /* Preenche a largura do link no hover */
+    width: 100%;
+  }
+  /* 
+  @media (max-width: 870px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+  } */
+
+  @media (max-width: 700px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
-
-
-
-
