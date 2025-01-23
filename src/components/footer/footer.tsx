@@ -4,6 +4,7 @@ import * as G from '../../GlobalStyles';
 import github from '../../assets/icons/github.png';
 import linkedin from '../../assets/icons/linkedin.svg';
 import email from '../../assets/icons/email.svg';
+import whatsapp from '../../assets/icons/whatsapp.svg';
 
 interface ComponentProps {
   id?: string;
@@ -11,22 +12,25 @@ interface ComponentProps {
 export const Footer: React.FC<ComponentProps> = ({ id }) => {
   return (
     <C.ContainerFooter>
-      <G.Container padding='15px' column width='50%' id={id}>
-        <Logo></Logo>
-        <p>© 2025 Abraham Melquisedeque Pereira Licá. Todos os direitos reservados.</p>
-      </G.Container>
+      <C.ContainerLeft id={id}>
+        <C.Logo>Abraham Licá</C.Logo>
+        <C.Description>© 2025 Abraham Melquisedeque Pereira Licá. Todos os direitos reservados.</C.Description>
+      </C.ContainerLeft>
 
-      <G.Container width='15%' justifyContent='space-between' padding='10px'>
-        <G.Link href='https://github.com/AbrahamLica' target='_blank'>
+      <C.ContainerRight>
+        <C.Link href='https://github.com/AbrahamLica' target='_blank'>
           <C.Img src={github} />
-        </G.Link>
-        <G.Link href='https://www.linkedin.com/in/abraham-lica' target='_blank'>
+        </C.Link>
+        <C.Link href='https://www.linkedin.com/in/abraham-lica' target='_blank'>
           <C.Img src={linkedin} />
-        </G.Link>
-        <G.Link href='mailto:abrahamlica451@gmail.com'>
+        </C.Link>
+        <C.Link href='https://wa.me/5591981661186'>
+          <C.Img src={whatsapp} />
+        </C.Link>
+        <C.Link href='mailto:abrahamlica451@gmail.com'>
           <C.Img src={email} />
-        </G.Link>
-      </G.Container>
+        </C.Link>
+      </C.ContainerRight>
     </C.ContainerFooter>
   );
 };

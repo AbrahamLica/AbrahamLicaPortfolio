@@ -135,6 +135,10 @@ export const Title = styled.p<TextProps>`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   background-color: ${(props) => props.backgroundColor};
+
+  @media (max-width: 1270px) {
+    text-align: center;
+  }
 `;
 
 export const TitleSecondary = styled.p<TextProps>`
@@ -147,6 +151,10 @@ export const TitleSecondary = styled.p<TextProps>`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   background-color: ${(props) => props.backgroundColor};
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const Link = styled.a<TextProps>`

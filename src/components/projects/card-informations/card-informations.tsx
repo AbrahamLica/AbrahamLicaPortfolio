@@ -19,34 +19,34 @@ export const CardInformations = ({ name, description, linkRepositoryFrontend, li
   }, []);
 
   return (
-    <G.Container width='50%' column data-aos='fade-right'>
+    <C.MainContainer data-aos='fade-right'>
       <C.Title>{name}</C.Title>
       <C.Description>{description}</C.Description>
-      <G.Container padding='7px 0' width='100%' justifyContent='space-between'>
+      <C.ContainerButtons>
         {linkRepositoryFrontend && (
-          <G.Button>
-            <G.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
+          <C.Button>
+            <C.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
               Repositório Front-end <CgLink />
-            </G.ButtonLink>
-          </G.Button>
+            </C.ButtonLink>
+          </C.Button>
         )}
 
         {linkRepositoryBackend && (
-          <G.Button>
-            <G.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
+          <C.Button>
+            <C.ButtonLink href={linkRepositoryFrontend} target='_blank' rel='noopener noreferrer' className='button_top'>
               Repositório Back-end <CgLink />
-            </G.ButtonLink>
-          </G.Button>
+            </C.ButtonLink>
+          </C.Button>
         )}
         {linkProjectRunning && (
-          <G.Button>
-            <G.ButtonLink href={linkProjectRunning} target='_blank' rel='noopener noreferrer' className='button_top'>
+          <C.Button>
+            <C.ButtonLink href={linkProjectRunning} target='_blank' rel='noopener noreferrer' className='button_top'>
               Projeto em execução <CgLink />
-            </G.ButtonLink>
-          </G.Button>
+            </C.ButtonLink>
+          </C.Button>
         )}
-      </G.Container>
-    </G.Container>
+      </C.ContainerButtons>
+    </C.MainContainer>
   );
 };
 

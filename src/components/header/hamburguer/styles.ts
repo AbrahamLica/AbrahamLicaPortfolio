@@ -71,6 +71,8 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
     z-index: 9999;
     box-shadow: none;
     padding: 30px 15px;
+    border: none;
+    border-radius: 0;
   }
 `;
 

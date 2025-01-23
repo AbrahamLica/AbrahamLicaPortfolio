@@ -5,7 +5,6 @@ import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { MdClose } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import teste from '../../../assets/icons/email.png';
 
 interface CarrouselProps {
   images: string[];
@@ -14,6 +13,7 @@ interface CarrouselProps {
 export const Carrousel = ({ images }: CarrouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const userInteractionRef = useRef(false);
 
@@ -28,8 +28,10 @@ export const Carrousel = ({ images }: CarrouselProps) => {
   };
 
   const openModal = (index: number) => {
-    setCurrentIndex(index);
-    setIsModalOpen(true);
+    if (!isSmallScreen) {
+      setCurrentIndex(index);
+      setIsModalOpen(true);
+    }
   };
 
   const closeModal = () => {
@@ -49,13 +51,24 @@ export const Carrousel = ({ images }: CarrouselProps) => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1000);
+    };
+
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
+
   return (
     <>
-      <G.Container width='50%' padding='30px' borderRadius='15px' column justifyContent='center' alignItems='center' data-aos='fade-left'>
+      <C.MainContainer data-aos='fade-left'>
         <C.Carousel>
           <C.Slider style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {images.map((image, index) => (
-              <C.Img key={index} src={image} alt={`Imagem ${index + 1}`} onClick={() => openModal(index)} />
+              <C.Img key={index} src={image} alt={`Imagem ${index + 1}`} onClick={() => openModal(index)} isSmallScreen={isSmallScreen} />
             ))}
           </C.Slider>
 
@@ -69,13 +82,11 @@ export const Carrousel = ({ images }: CarrouselProps) => {
         <C.Contador>
           {currentIndex + 1} / {images.length}
         </C.Contador>
-      </G.Container>
-
-      {/* <C.Img src={teste} /> */}
+      </C.MainContainer>
 
       {isModalOpen && (
-        <C.Modal>
-          <C.ModalContent>
+        <C.Modal onClick={closeModal}>
+          <C.ModalContent onClick={(e) => e.stopPropagation()}>
             <C.CloseButton onClick={closeModal}>
               <MdClose />
             </C.CloseButton>
@@ -97,5 +108,3 @@ export const Carrousel = ({ images }: CarrouselProps) => {
     </>
   );
 };
-
-export default Carrousel;

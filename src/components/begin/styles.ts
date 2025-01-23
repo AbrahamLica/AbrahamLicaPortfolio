@@ -175,7 +175,7 @@ export const textoDigitando = styled.div`
 
   @media (max-width: 375px) {
     & > span {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     & > span:nth-child(2) {

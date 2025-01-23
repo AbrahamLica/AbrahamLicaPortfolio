@@ -18,14 +18,15 @@ export const About: React.FC<ComponentProps> = ({ id }) => {
   }, []);
 
   return (
-    <G.Container width='90%' justifyContent='space-between' data-aos='fade-up' id={id} backgroundColor='red'>
-      <G.Container column width='50%' backgroundColor='purple'>
+    <C.MainContainer data-aos='fade-up' id={id}>
+      <C.IntroductionContainer>
         <G.Title>Sobre mim</G.Title>
         <G.Text margin='30px 0 0 0' lineHeight='2.5rem'>
           Olá! Sou Abraham Licá, <G.Span>desenvolvedor Web Full Stack</G.Span> com mais de 1 ano de experiência como <G.Span>freelancer.</G.Span> Trabalho com <G.Span>Java (Spring Boot)</G.Span> e{' '}
           <G.Span>Javascript (Angular/React.js).</G.Span> Com um olhar atento às necessidades do cliente, estou sempre pronto para criar <G.Span>soluções eficientes e inovadoras</G.Span> que atendam
           às suas expectativas.
         </G.Text>
+
         <G.Container>
           <G.Button margin='20px 0' fontSize='1.3rem'>
             <G.ButtonLink href={resume} download className='button_top'>
@@ -36,9 +37,11 @@ export const About: React.FC<ComponentProps> = ({ id }) => {
             </G.ButtonLink>
           </G.Button>
         </G.Container>
-      </G.Container>
+      </C.IntroductionContainer>
 
-      <C.Img src={eu} />
-    </G.Container>
+      <C.ImgContainer>
+        <C.Img src={eu} />
+      </C.ImgContainer>
+    </C.MainContainer>
   );
 };
