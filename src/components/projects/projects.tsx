@@ -2,6 +2,7 @@ import * as C from './styles';
 import * as G from '../../GlobalStyles';
 import { Carrousel } from './carrousel/carrousel';
 import CardInformations from './card-informations/card-informations';
+import infopulse1 from '../../assets/imgs/projetos/infopulse/3.jpeg';
 
 interface ComponentProps {
   id?: string;
@@ -41,7 +42,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       name: 'InfoPulse',
       description: 'Sistema de Notícias Web que permite aos usuários criar, ler, atualizar e excluir artigos de notícias (CRUD), gerenciar categorias e acessar recursos adicionais.',
       images: [
-        '/src/assets/imgs/projetos/infopulse/3.jpeg',
+        infopulse1,
         '/src/assets/imgs/projetos/infopulse/4.jpeg',
         '/src/assets/imgs/projetos/infopulse/5.jpeg',
         '/src/assets/imgs/projetos/infopulse/6.jpeg',
