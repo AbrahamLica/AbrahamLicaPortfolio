@@ -24,7 +24,7 @@ export const Footer: React.FC<ComponentProps> = ({ id }) => {
         <C.Link href='https://www.linkedin.com/in/abraham-lica' target='_blank'>
           <C.Img src={linkedin} />
         </C.Link>
-        <C.Link href='https://wa.me/5591981661186'>
+        <C.Link href='https://wa.me/5591981661186' target='_blank'>
           <C.Img src={whatsapp} />
         </C.Link>
         <C.Link href='mailto:abrahamlica451@gmail.com'>

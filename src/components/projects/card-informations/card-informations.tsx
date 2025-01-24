@@ -11,9 +11,10 @@ interface CardInformationsProps {
   linkRepositoryFrontend?: string;
   linkRepositoryBackend?: string;
   linkProjectRunning?: string;
+  techs?: string[] | any;
 }
 
-export const CardInformations = ({ name, description, linkRepositoryFrontend, linkRepositoryBackend, linkProjectRunning }: CardInformationsProps) => {
+export const CardInformations = ({ name, description, linkRepositoryFrontend, linkRepositoryBackend, linkProjectRunning, techs }: CardInformationsProps) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -22,6 +23,13 @@ export const CardInformations = ({ name, description, linkRepositoryFrontend, li
     <C.MainContainer data-aos='fade-right'>
       <C.Title>{name}</C.Title>
       <C.Description>{description}</C.Description>
+      <C.ContainerTechs>
+        {techs.map((tech: any, index: number) => (
+          <C.ContainerTech>
+            <img src={tech} alt='Static Badge' />
+          </C.ContainerTech>
+        ))}
+      </C.ContainerTechs>
       <C.ContainerButtons>
         {linkRepositoryFrontend && (
           <C.Button>

@@ -16,8 +16,26 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
     linkRepositoryFrontend?: string;
     linkRepositoryBackend?: string;
     linkProjectRunning?: string;
-    techs: string[];
+    techs: any[];
   }
+
+  const techs = {
+    html: 'https://img.shields.io/badge/HTML-gray?logo=html5',
+    css: 'https://img.shields.io/badge/CSS-gray?logo=css3',
+    java: 'https://img.shields.io/badge/Java-gray?logo=coffeescript',
+    javascript: 'https://img.shields.io/badge/JavaScript-gray?logo=JavaScript',
+    angular: 'https://img.shields.io/badge/Angular-gray?logo=angular',
+    typescript: 'https://img.shields.io/badge/Typescript-gray?logo=typescript',
+    springboot: 'https://img.shields.io/badge/Spring&boot-gray?logo=springboot',
+    jhipster: 'https://img.shields.io/badge/Jhipster-gray?logo=jhipster',
+    primeng: 'https://img.shields.io/badge/PrimeNG-gray?logo=primeng',
+    liquibase: 'https://img.shields.io/badge/Liquibase-gray?logo=liquibase',
+    postgresql: 'https://img.shields.io/badge/PostgreSQL-gray?logo=postgresql',
+    tailwindcss: 'https://img.shields.io/badge/TailwindCSS-gray?logo=tailwindcss',
+    tailwind: 'https://img.shields.io/badge/TailwindCSS-gray?logo=tailwindcss',
+    react: 'https://img.shields.io/badge/React.js-gray?logo=react',
+    styledcomponents: 'https://img.shields.io/badge/Styled&Components-gray?logo=styledcomponents',
+  };
 
   var Projects: Project[] = [
     {
@@ -36,7 +54,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       ],
       linkRepositoryBackend: 'https://github.com/AbrahamLica/InfoPulse_Backend',
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/InfoPulse_frontend',
-      techs: ['Java', 'Spring boot', 'Javascript', 'Typescript', 'Angular', 'PrimeNG', 'PrimeFlex', 'Liquibase', 'PostgreSQL', 'TailwindCss'],
+      techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'SisCopar',
@@ -51,14 +69,14 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
         '/src/assets/imgs/projetos/siscopar/6.png',
         '/src/assets/imgs/projetos/siscopar/7.png',
       ],
-      techs: ['Java', 'Spring boot', 'Jhipster', 'Javascript', 'Typescript', 'Angular', 'PrimeNG', 'Liquibase', 'PostgreSQL'],
+      techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'SisRamos',
       description:
         'Este é um sistema ERP interno desenvolvido para a empresa de soluções ambientais Ramos Engenharia. Tive o privilégio de criar o front-end de alguns módulos, incluindo listagem, cadastro e edição de serviços prestados (CRUD), além de funcionalidades de listagem, cadastro e edição de orçamentos, entre outras telas.',
       images: ['/src/assets/imgs/projetos/sisramos/1.jpeg', '/src/assets/imgs/projetos/sisramos/2.jpeg', '/src/assets/imgs/projetos/sisramos/3.jpeg', '/src/assets/imgs/projetos/sisramos/4.jpeg'],
-      techs: ['Java', 'Spring boot', 'Jhipster', 'Javascript', 'Typescript', 'Angular', 'PrimeNG', 'Liquibase', 'PostgreSQL'],
+      techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'Book Finder',
@@ -67,7 +85,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       images: ['/src/assets/imgs/projetos/book-finder/1.png', '/src/assets/imgs/projetos/book-finder/2.png'],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/Projeto-book-finder',
       linkProjectRunning: 'https://abrahamlica.github.io/Projeto-book-finder/',
-      techs: ['Html', 'Css', 'Javascript'],
+      techs: [techs.html, techs.css, techs.javascript],
     },
     {
       name: 'Smart Wallet',
@@ -75,7 +93,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       images: ['/src/assets/imgs/projetos/smart-wallet/1.png', '/src/assets/imgs/projetos/smart-wallet/2.png'],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/smart-wallet',
       linkProjectRunning: 'https://smart-wallet-eight.vercel.app/',
-      techs: ['React', 'Typescript', 'Styled Components'],
+      techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
       name: 'Marvel Database',
@@ -83,7 +101,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       images: ['/src/assets/imgs/projetos/marvel-database/1.png', '/src/assets/imgs/projetos/marvel-database/2.png', '/src/assets/imgs/projetos/marvel-database/3.png'],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/marvel-database',
       linkProjectRunning: 'https://marvel-studios-sandy.vercel.app/',
-      techs: ['React', 'Typescript', 'Styled Components'],
+      techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
       name: 'Movies Database',
@@ -91,7 +109,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
       images: ['/src/assets/imgs/projetos/movies-library/1.png', '/src/assets/imgs/projetos/movies-library/2.png', '/src/assets/imgs/projetos/movies-library/3.png'],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/movies-database',
       linkProjectRunning: 'https://movies-database-tan.vercel.app/',
-      techs: ['React', 'Typescript', 'Styled Components'],
+      techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
   ];
 
@@ -107,6 +125,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
             linkRepositoryFrontend={project.linkRepositoryFrontend}
             linkRepositoryBackend={project.linkRepositoryBackend}
             linkProjectRunning={project.linkProjectRunning}
+            techs={project.techs}
           />
 
           <Carrousel images={project.images} />

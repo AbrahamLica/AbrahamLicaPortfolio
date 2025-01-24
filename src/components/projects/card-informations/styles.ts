@@ -5,7 +5,6 @@ export const MainContainer = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
 
   @media (max-width: 1000px) {
     width: 100%;
@@ -35,20 +34,33 @@ export const Description = styled.p`
   }
 `;
 
+export const ContainerTechs = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 15px;
+  }
+`;
+
+export const ContainerTech = styled.div`
+  display: flex;
+  padding: 5px;
+
+  @media (max-width: 1000px) {
+  }
+`;
+
 export const ContainerButtons = styled.div`
   padding: 7px 0;
   width: 100%;
-  /* background-color: red; */
 
   @media (max-width: 1000px) {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
-  /* @media (max-width: 890px) {
-    flex-direction: column;
-  } */
 `;
 
 export const Link = styled.a`
