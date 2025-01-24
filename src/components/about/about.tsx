@@ -7,12 +7,15 @@ import { useEffect } from 'react';
 import { FaRegFile } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import resume from '../../assets/curriculo_abraham.pdf';
+import { useTranslation } from 'react-i18next';
 
 interface ComponentProps {
   id?: string;
 }
 
 export const About: React.FC<ComponentProps> = ({ id }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -20,17 +23,17 @@ export const About: React.FC<ComponentProps> = ({ id }) => {
   return (
     <C.MainContainer data-aos='fade-up' id={id}>
       <C.IntroductionContainer>
-        <G.Title>Sobre mim</G.Title>
+        <G.Title>{t('about.title')}</G.Title>
         <G.Text margin='30px 0 0 0' lineHeight='2.5rem'>
-          Olá! Sou Abraham Licá, <G.Span>desenvolvedor Web Full Stack</G.Span> com mais de 1 ano de experiência como <G.Span>freelancer.</G.Span> Trabalho com <G.Span>Java (Spring Boot)</G.Span> e{' '}
-          <G.Span>Javascript (Angular/React.js).</G.Span> Com um olhar atento às necessidades do cliente, estou sempre pronto para criar <G.Span>soluções eficientes e inovadoras</G.Span> que atendam
-          às suas expectativas.
+          {t('about.introduction.greeting')} <G.Span>{t('about.introduction.text1')}</G.Span> {t('about.introduction.text2')} <G.Span>{t('about.introduction.text3')}</G.Span>{' '}
+          {t('about.introduction.text4')} <G.Span>{t('about.introduction.text5')}</G.Span> {t('about.introduction.text6')} <G.Span>{t('about.introduction.text7')}</G.Span>{' '}
+          {t('about.introduction.text8')} <G.Span>{t('about.introduction.text9')}</G.Span> {t('about.introduction.text10')}
         </G.Text>
 
         <G.Container>
           <G.Button margin='20px 0' fontSize='1.3rem'>
             <G.ButtonLink href={resume} download className='button_top'>
-              Baixar CV
+              {t('about.button')}
               <IconContext.Provider value={{ style: { marginLeft: '8px', verticalAlign: 'middle' } }}>
                 <FaRegFile />
               </IconContext.Provider>

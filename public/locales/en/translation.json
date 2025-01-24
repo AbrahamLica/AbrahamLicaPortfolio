@@ -1,0 +1,150 @@
+{
+  "hamburger": {
+    "menuItems": {
+      "begin": "Home",
+      "about": "About",
+      "skills": "Technologies",
+      "services": "Services",
+      "projects": "Projects",
+      "recommendations": "Recommendations"
+    }
+  },
+
+  "begin": {
+    "name": "Abraham Licá",
+    "role": "Full-stack Web Developer",
+    "socialMedias": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
+    }
+  },
+
+  "about": {
+    "title": "About Me",
+    "introduction": {
+      "greeting": "Hello! I am Abraham Licá,",
+      "text1": "a Full Stack Web Developer",
+      "text2": "with over 1 year of experience as a",
+      "text3": "freelancer.",
+      "text4": "I work with",
+      "text5": "Java (Spring Boot)",
+      "text6": "and",
+      "text7": "Javascript (Angular/React.js).",
+      "text8": "With a keen eye on client needs, I am always ready to create",
+      "text9": "efficient and innovative solutions",
+      "text10": "that meet their expectations."
+    },
+    "button": "Download resume"
+  },
+
+  "skills": {
+    "title": "Technologies",
+    "techs": {
+      "html": "HTML",
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "angular": "Angular",
+      "bootstrap": "Bootstrap",
+      "primeng": "PrimeNG",
+      "sass": "Sass",
+      "tailwind": "Tailwind",
+      "redux": "Redux",
+      "java": "Java",
+      "spring": "Spring",
+      "postgre": "PostgreSQL",
+      "mysql": "MySQL"
+    }
+  },
+
+  "services": {
+    "title": "Hireable Services",
+    "list": {
+      "landing": {
+        "title": "Website and Landing Page Development",
+        "description": "Creation of modern, responsive websites and landing pages focused on results to highlight your brand."
+      },
+      "erp": {
+        "title": "Custom ERP Solutions",
+        "description": "Development of tailored ERP systems to integrate sectors and optimize business processes."
+      },
+      "api": {
+        "title": "Powerful APIs and Third-Party Integration",
+        "description": "Creation and integration of APIs with Java (Spring Boot) to connect systems with performance and security, including integration with popular APIs like Stripe, PayPal, and social networks."
+      },
+      "seo": {
+        "title": "System Performance Optimization",
+        "description": "Analysis and improvements in web applications to ensure high performance, reducing loading time and increasing efficiency."
+      },
+      "maintenance": {
+        "title": "Legacy System Maintenance",
+        "description": "Updating, bug fixing, and modernizing existing systems, maintaining their functionality and optimizing user experience."
+      },
+      "blog": {
+        "title": "Blog/Portal Development",
+        "description": "Creation of sites focused on publishing articles, news, or multimedia content, optimized for SEO and user experience."
+      }
+    }
+  },
+
+  "projects": {
+    "InfoPulse": {
+      "name": "InfoPulse",
+      "description": "Web News System that allows users to create, read, update, and delete news articles (CRUD), manage categories, and access additional features."
+    },
+    "SisCopar": {
+      "name": "SisCopar",
+      "description": "Internal ERP system made for a dental clinic."
+    },
+    "SisRamos": {
+      "name": "SisRamos",
+      "description": "Internal ERP system developed for the environmental solutions company Ramos Engenharia."
+    },
+    "BookFinder": {
+      "name": "Book Finder",
+      "description": "Book search tool using the Google Books API."
+    },
+    "SmartWallet": {
+      "name": "Smart Wallet",
+      "description": "Finance system for debt and salary control."
+    },
+    "MarvelDatabase": {
+      "name": "Marvel Database",
+      "description": "Website created using the Marvel API to explore characters and comics."
+    },
+    "MoviesDatabase": {
+      "name": "Movies Database",
+      "description": "Website to explore movies using the TMDB API."
+    },
+    "cardButtons": {
+      "repositoryFrontend": "Frontend Repository",
+      "repositoryBackend": "Backend Repository",
+      "runningProject": "Running Project"
+    },
+    "header": "Projects"
+  },
+
+  "recommendations": {
+    "title": "Recommendations",
+    "recommendation1": "Abraham stands out for his collaborative, proactive approach and responsibilities in the activities in which he is involved. These points certainly add value to any team. I recommend him in the certainty that he will deliver his best.",
+    "recommendation2": "I had the pleasure of leading the team where Abraham participated. He is a very easy person to deal with, extremely focused and studious. He never leaves tasks for later and wants to solve everything as quickly and as satisfactorily as possible. He is punctual, agile, and a partner to his colleagues, always concerned with the team's demands and with everyone's learning. A passionate learner, in his free time, he seeks to develop new skills and teaches them to those around him.",
+    "recommendation3": "An excellent professional with whom I had the honor of working. A role model in proactivity, great team player, and with above-average performance.",
+    "recommendation4": "Working with Abraham was an extremely positive experience. He is a dedicated IT professional, always willing to assist the team and share his knowledge. With excellent communication skills, he is able to explain technical concepts in a clear and accessible way, facilitating understanding and collaboration between colleagues and clients.",
+    "recommendation5": "I had the pleasure of working with Abraham, and I can say that he is a professional you can always count on. He solves everything with impressive speed, always takes the initiative, and is attentive to everything that needs to be done for the smooth functioning of the team.",
+    "recommendation6": "He is a unique professional, honest, and always willing to learn. He does not gossip, always seeks to resolve situations to contribute to the organizational climate. His drive and talent always impressed me.",
+    "recommendation7": "A dedicated collaborator with high customer service skills and technical development, and a lot of integrity!"
+  },
+
+  "footer": {
+    "logo": "Abraham Licá",
+    "description": "© 2025 Abraham Melquisedeque Pereira Licá. All rights reserved.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail"
+    }
+  }
+}

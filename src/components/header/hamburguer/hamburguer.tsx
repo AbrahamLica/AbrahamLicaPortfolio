@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import * as C from './styles';
 
 export const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,22 +37,22 @@ export const Hamburger = () => {
       </C.HamburgerSVG>
       <C.DropdownMenu isOpen={isOpen}>
         <C.MenuItem href='#begin' onClick={(e) => closeMenuAndScroll(e, '#begin')}>
-          Início
+          {t('hamburger.menuItems.begin')}
         </C.MenuItem>
         <C.MenuItem href='#about' onClick={(e) => closeMenuAndScroll(e, '#about')}>
-          Sobre
+          {t('hamburger.menuItems.about')}
         </C.MenuItem>
         <C.MenuItem href='#skills' onClick={(e) => closeMenuAndScroll(e, '#skills')}>
-          Tecnologias
+          {t('hamburger.menuItems.skills')}
         </C.MenuItem>
         <C.MenuItem href='#services' onClick={(e) => closeMenuAndScroll(e, '#services')}>
-          Serviços
+          {t('hamburger.menuItems.services')}
         </C.MenuItem>
         <C.MenuItem href='#projects' onClick={(e) => closeMenuAndScroll(e, '#projects')}>
-          Projetos
+          {t('hamburger.menuItems.projects')}
         </C.MenuItem>
-        <C.MenuItem href='#recomendations' onClick={(e) => closeMenuAndScroll(e, '#recomendations')}>
-          Recomendações
+        <C.MenuItem href='#recomendations' onClick={(e) => closeMenuAndScroll(e, '#recommendations')}>
+          {t('hamburger.menuItems.recommendations')}
         </C.MenuItem>
       </C.DropdownMenu>
     </C.HamburgerLabel>

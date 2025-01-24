@@ -67,7 +67,7 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 100%;
+    width: calc(100vw - 20px);
     z-index: 9999;
     box-shadow: none;
     padding: 30px 15px;

@@ -32,21 +32,14 @@ import marvel3 from '../../assets/imgs/projetos/marvel-database/3.png';
 import movies1 from '../../assets/imgs/projetos/movies-library/1.png';
 import movies2 from '../../assets/imgs/projetos/movies-library/2.png';
 import movies3 from '../../assets/imgs/projetos/movies-library/3.png';
+import { useTranslation } from 'react-i18next';
 
 interface ComponentProps {
   id?: string;
 }
 
 export const Projects: React.FC<ComponentProps> = ({ id }) => {
-  interface Project {
-    name: string;
-    description: string;
-    images: string[];
-    linkRepositoryFrontend?: string;
-    linkRepositoryBackend?: string;
-    linkProjectRunning?: string;
-    techs: any[];
-  }
+  const { t } = useTranslation();
 
   const techs = {
     html: 'https://img.shields.io/badge/HTML-gray?logo=html5',
@@ -66,54 +59,54 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
     styledcomponents: 'https://img.shields.io/badge/Styled&Components-gray?logo=styledcomponents',
   };
 
-  const Projects: Project[] = [
+  const Projects = [
     {
-      name: 'InfoPulse',
-      description: 'Sistema de Notícias Web que permite aos usuários criar, ler, atualizar e excluir artigos de notícias (CRUD), gerenciar categorias e acessar recursos adicionais.',
+      name: t('projects.InfoPulse.name'),
+      description: t('projects.InfoPulse.description'),
       images: [infopulse1, infopulse2, infopulse3, infopulse4, infopulse5, infopulse6, infopulse7, infopulse8, infopulse9],
       linkRepositoryBackend: 'https://github.com/AbrahamLica/InfoPulse_Backend',
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/InfoPulse_frontend',
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
-      name: 'SisCopar',
-      description: 'Sistema ERP interno feito para uma clínica odontológica.',
+      name: t('projects.SisCopar.name'),
+      description: t('projects.SisCopar.description'),
       images: [siscopar1, siscopar2, siscopar3, siscopar4, siscopar5, siscopar6, siscopar7],
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
-      name: 'SisRamos',
-      description: 'Sistema ERP interno desenvolvido para a empresa de soluções ambientais Ramos Engenharia.',
+      name: t('projects.SisRamos.name'),
+      description: t('projects.SisRamos.description'),
       images: [sisramos1, sisramos2, sisramos3, sisramos4],
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
-      name: 'Book Finder',
-      description: 'Buscador de livros utilizando a API do Google Books.',
+      name: t('projects.BookFinder.name'),
+      description: t('projects.BookFinder.description'),
       images: [bookFinder1, bookFinder2],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/Projeto-book-finder',
       linkProjectRunning: 'https://abrahamlica.github.io/Projeto-book-finder/',
       techs: [techs.html, techs.css, techs.javascript],
     },
     {
-      name: 'Smart Wallet',
-      description: 'Sistema de finanças para controle de dívidas e salários.',
+      name: t('projects.SmartWallet.name'),
+      description: t('projects.SmartWallet.description'),
       images: [smartWallet1, smartWallet2],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/smart-wallet',
       linkProjectRunning: 'https://smart-wallet-eight.vercel.app/',
       techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
-      name: 'Marvel Database',
-      description: 'Site criado usando a API da Marvel para explorar personagens e quadrinhos.',
+      name: t('projects.MarvelDatabase.name'),
+      description: t('projects.MarvelDatabase.description'),
       images: [marvel1, marvel2, marvel3],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/marvel-database',
       linkProjectRunning: 'https://marvel-studios-sandy.vercel.app/',
       techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
-      name: 'Movies Database',
-      description: 'Site para explorar filmes utilizando a API do TMDB.',
+      name: t('projects.MoviesDatabase.name'),
+      description: t('projects.MoviesDatabase.description'),
       images: [movies1, movies2, movies3],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/movies-database',
       linkProjectRunning: 'https://movies-database-tan.vercel.app/',
@@ -123,7 +116,7 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
 
   return (
     <G.Container column width='90%' margin='70px 0' id={id}>
-      <G.Title margin='0 0 60px 0'>Projetos</G.Title>
+      <G.Title margin='0 0 60px 0'>{t('projects.header')}</G.Title>
 
       {Projects.map((project, index) => (
         <C.ContainerProjects key={index}>

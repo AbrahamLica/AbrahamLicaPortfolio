@@ -19,8 +19,19 @@ export const container = styled.div`
   width: 100%;
   padding: 15px;
 
-  @media (max-width: 870px) {
+  /* @media (max-width: 870px) {
     justify-content: center;
+  } */
+`;
+
+export const ContainerRight = styled.div`
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 870px) {
+    width: 100%;
   }
 `;
 
