@@ -1,5 +1,4 @@
 import * as C from './styles';
-import * as G from '../../../GlobalStyles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -24,7 +23,7 @@ export const CardInformations = ({ name, description, linkRepositoryFrontend, li
       <C.Title>{name}</C.Title>
       <C.Description>{description}</C.Description>
       <C.ContainerTechs>
-        {techs.map((tech: any, index: number) => (
+        {techs.map((tech: any) => (
           <C.ContainerTech>
             <img src={tech} alt='Static Badge' />
           </C.ContainerTech>

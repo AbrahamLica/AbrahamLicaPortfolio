@@ -1,18 +1,4 @@
-import { keyframes, styled } from 'styled-components';
-import { ContainerProps } from '../../GlobalStyles';
-
-const brutalistShake = keyframes`
-  0%,
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(-2px) translateY(-2px) rotate(-1deg);
-  }
-  75% {
-    transform: translateX(2px) translateY(2px) rotate(1deg);
-  }
-`;
+import { styled } from 'styled-components';
 
 export const MainContainer = styled.div`
   width: 90%;

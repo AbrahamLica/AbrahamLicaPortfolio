@@ -1,6 +1,5 @@
 import * as C from './styles';
 import * as G from '../../GlobalStyles';
-
 import html from '../../assets/icons/tech-icons/normal-icons/html.png';
 import css from '../../assets/icons/tech-icons/normal-icons/css.png';
 import javascript from '../../assets/icons/tech-icons/normal-icons/javascript.png';
@@ -12,8 +11,6 @@ import primeng from '../../assets/icons/tech-icons/normal-icons/primeng.png';
 import sass from '../../assets/icons/tech-icons/normal-icons/sass.png';
 import tailwind from '../../assets/icons/tech-icons/normal-icons/tailwind.png';
 import mysql from '../../assets/icons/tech-icons/normal-icons/mysql.png';
-import node from '../../assets/icons/tech-icons/normal-icons/node.png';
-import php from '../../assets/icons/tech-icons/normal-icons/php.png';
 import postgre from '../../assets/icons/tech-icons/normal-icons/postgre.png';
 import redux from '../../assets/icons/tech-icons/normal-icons/redux.png';
 import spring from '../../assets/icons/tech-icons/normal-icons/spring.png';

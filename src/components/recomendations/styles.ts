@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-
+import styled from 'styled-components';
 
 export const ContainerRecomendation = styled.div`
   display: flex;
@@ -109,4 +108,3 @@ export const SvgIcon = styled.svg`
     transform: translateY(-200%);
   }
 `;
-

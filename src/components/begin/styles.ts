@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { ContainerProps, TextProps } from '../../GlobalStyles';
+import { ContainerProps } from '../../GlobalStyles';
 
 const typing = keyframes`
   0% {

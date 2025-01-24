@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import * as C from './styles';
-import * as G from '../../../GlobalStyles';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import { MdClose } from 'react-icons/md';
 import AOS from 'aos';

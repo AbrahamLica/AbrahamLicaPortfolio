@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Header from './components/header/header';
 import * as C from './styles';
 import { GlobalStyle } from './AppGlobalStyles';
@@ -11,8 +10,6 @@ import { Recomendations } from './components/recomendations/recomendations';
 import { Projects } from './components/projects/projects';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <GlobalStyle />

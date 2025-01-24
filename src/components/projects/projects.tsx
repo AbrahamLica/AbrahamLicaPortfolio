@@ -1,6 +1,5 @@
 import * as C from './styles';
 import * as G from '../../GlobalStyles';
-import { useEffect, useState } from 'react';
 import { Carrousel } from './carrousel/carrousel';
 import CardInformations from './card-informations/card-informations';
 
