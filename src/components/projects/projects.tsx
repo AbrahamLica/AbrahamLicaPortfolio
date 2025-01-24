@@ -3,6 +3,35 @@ import * as G from '../../GlobalStyles';
 import { Carrousel } from './carrousel/carrousel';
 import CardInformations from './card-informations/card-informations';
 import infopulse1 from '../../assets/imgs/projetos/infopulse/3.jpeg';
+import infopulse2 from '../../assets/imgs/projetos/infopulse/4.jpeg';
+import infopulse3 from '../../assets/imgs/projetos/infopulse/5.jpeg';
+import infopulse4 from '../../assets/imgs/projetos/infopulse/6.jpeg';
+import infopulse5 from '../../assets/imgs/projetos/infopulse/7.jpeg';
+import infopulse6 from '../../assets/imgs/projetos/infopulse/8.jpeg';
+import infopulse7 from '../../assets/imgs/projetos/infopulse/9.jpeg';
+import infopulse8 from '../../assets/imgs/projetos/infopulse/10.jpeg';
+import infopulse9 from '../../assets/imgs/projetos/infopulse/11.jpeg';
+import siscopar1 from '../../assets/imgs/projetos/siscopar/1.png';
+import siscopar2 from '../../assets/imgs/projetos/siscopar/2.png';
+import siscopar3 from '../../assets/imgs/projetos/siscopar/3.png';
+import siscopar4 from '../../assets/imgs/projetos/siscopar/4.png';
+import siscopar5 from '../../assets/imgs/projetos/siscopar/5.png';
+import siscopar6 from '../../assets/imgs/projetos/siscopar/6.png';
+import siscopar7 from '../../assets/imgs/projetos/siscopar/7.png';
+import sisramos1 from '../../assets/imgs/projetos/sisramos/1.jpeg';
+import sisramos2 from '../../assets/imgs/projetos/sisramos/2.jpeg';
+import sisramos3 from '../../assets/imgs/projetos/sisramos/3.jpeg';
+import sisramos4 from '../../assets/imgs/projetos/sisramos/4.jpeg';
+import bookFinder1 from '../../assets/imgs/projetos/book-finder/1.png';
+import bookFinder2 from '../../assets/imgs/projetos/book-finder/2.png';
+import smartWallet1 from '../../assets/imgs/projetos/smart-wallet/1.png';
+import smartWallet2 from '../../assets/imgs/projetos/smart-wallet/2.png';
+import marvel1 from '../../assets/imgs/projetos/marvel-database/1.png';
+import marvel2 from '../../assets/imgs/projetos/marvel-database/2.png';
+import marvel3 from '../../assets/imgs/projetos/marvel-database/3.png';
+import movies1 from '../../assets/imgs/projetos/movies-library/1.png';
+import movies2 from '../../assets/imgs/projetos/movies-library/2.png';
+import movies3 from '../../assets/imgs/projetos/movies-library/3.png';
 
 interface ComponentProps {
   id?: string;
@@ -37,76 +66,55 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
     styledcomponents: 'https://img.shields.io/badge/Styled&Components-gray?logo=styledcomponents',
   };
 
-  var Projects: Project[] = [
+  const Projects: Project[] = [
     {
       name: 'InfoPulse',
       description: 'Sistema de Notícias Web que permite aos usuários criar, ler, atualizar e excluir artigos de notícias (CRUD), gerenciar categorias e acessar recursos adicionais.',
-      images: [
-        infopulse1,
-        '/src/assets/imgs/projetos/infopulse/4.jpeg',
-        '/src/assets/imgs/projetos/infopulse/5.jpeg',
-        '/src/assets/imgs/projetos/infopulse/6.jpeg',
-        '/src/assets/imgs/projetos/infopulse/7.jpeg',
-        '/src/assets/imgs/projetos/infopulse/8.jpeg',
-        '/src/assets/imgs/projetos/infopulse/9.jpeg',
-        '/src/assets/imgs/projetos/infopulse/10.jpeg',
-        '/src/assets/imgs/projetos/infopulse/11.jpeg',
-      ],
+      images: [infopulse1, infopulse2, infopulse3, infopulse4, infopulse5, infopulse6, infopulse7, infopulse8, infopulse9],
       linkRepositoryBackend: 'https://github.com/AbrahamLica/InfoPulse_Backend',
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/InfoPulse_frontend',
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'SisCopar',
-      description:
-        'Este é um sistema ERP interno feito para uma clínica odontológica chamada Copar Odontologia. O sistema conta com módulos de controle de estoque, cadastro de clientes e fornecedores, orçamentos, geração de relatórios, movimentação de documentos, registro de produção por dentista, controle financeiro, emissão de notas fiscais, entre outros.',
-      images: [
-        '/src/assets/imgs/projetos/siscopar/1.png',
-        '/src/assets/imgs/projetos/siscopar/2.png',
-        '/src/assets/imgs/projetos/siscopar/3.png',
-        '/src/assets/imgs/projetos/siscopar/4.png',
-        '/src/assets/imgs/projetos/siscopar/5.png',
-        '/src/assets/imgs/projetos/siscopar/6.png',
-        '/src/assets/imgs/projetos/siscopar/7.png',
-      ],
+      description: 'Sistema ERP interno feito para uma clínica odontológica.',
+      images: [siscopar1, siscopar2, siscopar3, siscopar4, siscopar5, siscopar6, siscopar7],
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'SisRamos',
-      description:
-        'Este é um sistema ERP interno desenvolvido para a empresa de soluções ambientais Ramos Engenharia. Tive o privilégio de criar o front-end de alguns módulos, incluindo listagem, cadastro e edição de serviços prestados (CRUD), além de funcionalidades de listagem, cadastro e edição de orçamentos, entre outras telas.',
-      images: ['/src/assets/imgs/projetos/sisramos/1.jpeg', '/src/assets/imgs/projetos/sisramos/2.jpeg', '/src/assets/imgs/projetos/sisramos/3.jpeg', '/src/assets/imgs/projetos/sisramos/4.jpeg'],
+      description: 'Sistema ERP interno desenvolvido para a empresa de soluções ambientais Ramos Engenharia.',
+      images: [sisramos1, sisramos2, sisramos3, sisramos4],
       techs: [techs.java, techs.springboot, techs.jhipster, techs.liquibase, techs.postgresql, techs.javascript, techs.typescript, techs.angular, techs.primeng, techs.tailwind],
     },
     {
       name: 'Book Finder',
-      description:
-        'Um buscador de livros que utiliza a API do Google Books API para realizar a requisição e retornar os livros desejados. Procurei criar o site com uma interface bem clean e elegante ao mesmo tempo.',
-      images: ['/src/assets/imgs/projetos/book-finder/1.png', '/src/assets/imgs/projetos/book-finder/2.png'],
+      description: 'Buscador de livros utilizando a API do Google Books.',
+      images: [bookFinder1, bookFinder2],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/Projeto-book-finder',
       linkProjectRunning: 'https://abrahamlica.github.io/Projeto-book-finder/',
       techs: [techs.html, techs.css, techs.javascript],
     },
     {
       name: 'Smart Wallet',
-      description: 'Smart Wallet é um sistema de finanças que visa facilitar o controle das dívidas/salários ao decorrer dos meses do ano.',
-      images: ['/src/assets/imgs/projetos/smart-wallet/1.png', '/src/assets/imgs/projetos/smart-wallet/2.png'],
+      description: 'Sistema de finanças para controle de dívidas e salários.',
+      images: [smartWallet1, smartWallet2],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/smart-wallet',
       linkProjectRunning: 'https://smart-wallet-eight.vercel.app/',
       techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
       name: 'Marvel Database',
-      description: 'Site criado usando a API da Marvel. Conheça mais dos seus personagens favoritos, quadrinhos e series.',
-      images: ['/src/assets/imgs/projetos/marvel-database/1.png', '/src/assets/imgs/projetos/marvel-database/2.png', '/src/assets/imgs/projetos/marvel-database/3.png'],
+      description: 'Site criado usando a API da Marvel para explorar personagens e quadrinhos.',
+      images: [marvel1, marvel2, marvel3],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/marvel-database',
       linkProjectRunning: 'https://marvel-studios-sandy.vercel.app/',
       techs: [techs.react, techs.typescript, techs.styledcomponents],
     },
     {
       name: 'Movies Database',
-      description: 'Um site de filmes, que utiliza a API do TMDB (The movie db) para listar os filmes com vários filtros diferentes.',
-      images: ['/src/assets/imgs/projetos/movies-library/1.png', '/src/assets/imgs/projetos/movies-library/2.png', '/src/assets/imgs/projetos/movies-library/3.png'],
+      description: 'Site para explorar filmes utilizando a API do TMDB.',
+      images: [movies1, movies2, movies3],
       linkRepositoryFrontend: 'https://github.com/AbrahamLica/movies-database',
       linkProjectRunning: 'https://movies-database-tan.vercel.app/',
       techs: [techs.react, techs.typescript, techs.styledcomponents],
@@ -127,7 +135,6 @@ export const Projects: React.FC<ComponentProps> = ({ id }) => {
             linkProjectRunning={project.linkProjectRunning}
             techs={project.techs}
           />
-
           <Carrousel images={project.images} />
         </C.ContainerProjects>
       ))}
