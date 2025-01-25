@@ -51,7 +51,7 @@ export const Hamburger = () => {
         <C.MenuItem href='#projects' onClick={(e) => closeMenuAndScroll(e, '#projects')}>
           {t('hamburger.menuItems.projects')}
         </C.MenuItem>
-        <C.MenuItem href='#recomendations' onClick={(e) => closeMenuAndScroll(e, '#recommendations')}>
+        <C.MenuItem href='#recommendations' onClick={(e) => closeMenuAndScroll(e, '#recommendations')}>
           {t('hamburger.menuItems.recommendations')}
         </C.MenuItem>
       </C.DropdownMenu>

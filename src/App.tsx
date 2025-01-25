@@ -20,7 +20,7 @@ function App() {
         <Skills id='skills' />
         <Services id='services' />
         <Projects id='projects' />
-        <Recomendations id='recomendations' />
+        <Recomendations id='recommendations' />
         <Footer id='footer' />
       </C.mainContainer>
     </>
