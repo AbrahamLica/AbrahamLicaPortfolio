@@ -6,7 +6,8 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { FaRegFile } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
-import resume from '../../assets/curriculo_abraham.pdf';
+import resumePT from '../../assets/curriculo_abraham.pdf';
+import resumeEN from '../../assets/curriculo_abraham_en.pdf'
 import { useTranslation } from 'react-i18next';
 
 interface ComponentProps {
@@ -14,7 +15,9 @@ interface ComponentProps {
 }
 
 export const About: React.FC<ComponentProps> = ({ id }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -32,7 +35,7 @@ export const About: React.FC<ComponentProps> = ({ id }) => {
 
         <G.Container>
           <G.Button margin='20px 0' fontSize='1.3rem'>
-            <G.ButtonLink href={resume} download className='button_top'>
+            <G.ButtonLink href={i18n.language === 'en' ? resumeEN : resumePT} download className='button_top'>
               {t('about.button')}
               <IconContext.Provider value={{ style: { marginLeft: '8px', verticalAlign: 'middle' } }}>
                 <FaRegFile />
