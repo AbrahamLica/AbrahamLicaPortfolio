@@ -18,6 +18,7 @@ import java from '../../assets/icons/tech-icons/normal-icons/java.png';
 import node from '../../assets/icons/tech-icons/normal-icons/node.png';
 import express from '../../assets/icons/tech-icons/normal-icons/express.png';
 import mongo from '../../assets/icons/tech-icons/normal-icons/mongodb.svg';
+import nest from '../../assets/icons/tech-icons/normal-icons/nestjs.png';
 import background from '../../assets/imgs/background-skills.png';
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
@@ -66,9 +67,10 @@ export const Skills: React.FC<ComponentProps> = ({ id }) => {
           <C.IconTech src={spring} title={t('skills.techs.spring')} />
           <C.IconTech src={postgre} title={t('skills.techs.postgre')} />
           <C.IconTech src={mysql} title={t('skills.techs.mysql')} />
-          <C.IconTech src={node} title={t('skills.techs.mysql')} />
-          <C.IconTech src={express} title={t('skills.techs.mysql')} />
-          <C.IconTech src={mongo} title={t('skills.techs.mysql')} />
+          <C.IconTech src={node} title={t('skills.techs.node')} />
+          <C.IconTech src={express} title={t('skills.techs.express')} />
+          <C.IconTech src={mongo} title={t('skills.techs.mongo')} />
+          <C.IconTech src={nest} title={t('skills.techs.nest')} />
         </C.ContainerTechs>
       </C.ContainerBackground>
     </G.Container>

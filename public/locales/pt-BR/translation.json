@@ -55,7 +55,11 @@
       "java": "Java",
       "spring": "Spring",
       "postgre": "PostgreSQL",
-      "mysql": "MySQL"
+      "mysql": "MySQL",
+      "node": "Node",
+      "express": "Express",
+      "mongo": "MongoDB",
+      "nest": "NestJS"
     }
   },
 
